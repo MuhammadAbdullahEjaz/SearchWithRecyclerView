@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecyclerViewSearch</string>
+    <string name="rgbTV">(R: %d, G: %d, B: %d)</string>
+</resources>
