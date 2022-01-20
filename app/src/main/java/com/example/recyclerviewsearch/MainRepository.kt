@@ -12,7 +12,7 @@ class MainRepository(private val colors: InputStream) {
     suspend fun prepareData():List<Color> {
         val colorsList = mutableListOf<Color>()
         csvReader().openAsync(colors) {
-            readAllAsSequence().asFlow().collect {
+            readAllAsSequence().forEach {
                 colorsList.add(
                     Color(
                         it[0],

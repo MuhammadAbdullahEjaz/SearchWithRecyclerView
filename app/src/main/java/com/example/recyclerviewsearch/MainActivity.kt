@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel.getColors()
         viewModel.colorsList.observe(this){ colors ->
-            Log.d("fetch", "color is $colors")
+            Log.d("fetch", "colors are ${colors.size}")
             binding.colorsRV.adapter = ColorsRvAdapter(colors)
         }
 
